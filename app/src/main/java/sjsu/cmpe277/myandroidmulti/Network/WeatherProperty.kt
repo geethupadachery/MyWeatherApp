@@ -43,6 +43,6 @@ data class CoordPart(
 )
 
 data class WindPart(
-    val speed: Double,
-    val deg: Double
+    val speed: Double
+    //val deg: Double
 )

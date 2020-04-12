@@ -60,7 +60,7 @@ class WeatherViewModel : ViewModel() {
                         visibility = "${response.body()?.visibility} m",
 
                         windSpeed = "${response.body()?.windPart?.speed} m/s",
-                        windDegree = "${response.body()?.windPart?.deg}°",
+                        //windDegree = "${response.body()?.windPart?.deg}°",
 
                         sunrise = response.body()?.sysPart?.sunrise?.convertTimeToString().toString(),
                         sunset = response.body()?.sysPart?.sunset?.convertTimeToString().toString(),
