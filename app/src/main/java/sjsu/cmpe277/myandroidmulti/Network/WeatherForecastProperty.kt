@@ -10,7 +10,7 @@ data class WeatherForecastProperty(
 data class DailyWeatherPart(
     val dt: Long,
     @Json(name = "temp")    val tempPart: TemperaturePart,
-    @Json(name = "weather")    val weatherPart: List<WeatherForcastPart>
+    @Json(name = "weather")    val weatherPart: List<WeatherForecastPart>
 )
 data class TemperaturePart(
     val min: Double,
@@ -19,7 +19,7 @@ data class TemperaturePart(
     val night: Double
 )
 
-data class WeatherForcastPart(
+data class WeatherForecastPart(
     val main: String,
     val description: String,
     val icon: String

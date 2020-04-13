@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/weeklyForecastFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".Network.WeeklyForecastFragment">
 
@@ -37,6 +35,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -57,6 +56,7 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image0"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
@@ -86,12 +86,21 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/description0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Partly Cloudy"
@@ -975,4 +984,4 @@
         </LinearLayout>
     </ScrollView>
 
-</FrameLayout>
+</layout>
