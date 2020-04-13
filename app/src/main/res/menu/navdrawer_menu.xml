@@ -12,7 +12,7 @@
         android:id="@+id/settingsFragment"
         android:title="Settings" />
     <item
-        android:id="@+id/aboutFragment"
+        android:id="@+id/about"
         android:icon="@android:drawable/presence_away"
         android:title="@string/about_title" />
 </menu>

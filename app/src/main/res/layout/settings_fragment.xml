@@ -35,7 +35,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Location" />
+                        android:text="Edit Location" />
 
                     <TextView
                         android:id="@+id/locationDescription"

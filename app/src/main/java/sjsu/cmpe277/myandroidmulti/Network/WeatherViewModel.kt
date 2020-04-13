@@ -1,5 +1,6 @@
 package sjsu.cmpe277.myandroidmulti.Network
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import retrofit2.Call
@@ -8,6 +9,7 @@ import retrofit2.Response
 import sjsu.cmpe277.myandroidmulti.Utils.convertTimeToDateString
 import sjsu.cmpe277.myandroidmulti.Utils.convertTimeToString
 import sjsu.cmpe277.myandroidmulti.Utils.kelvinToFarenheit
+
 
 private const val WeatherAPPID = "2b492c001d57cd5499947bd3d3f9c47b"
 
@@ -18,19 +20,36 @@ class WeatherViewModel : ViewModel() {
     val _response = MutableLiveData<String>()
     val weatherLiveData = MutableLiveData<WeatherData>()
 
+    var city = MutableLiveData<String>()
+    lateinit var defaultcity: String
 
 
     /**
      * Call getWeatherProperties() on init so we can display status immediately.
      */
     init {
+        Log.i("WeatherViewModel", "WeatherViewModel created!")
+        defaultcity = "Mountain View"
+        Log.i("city---1", city.value.toString())
         getWeatherProperties()
+        //city.value = ""
+        //Log.i("city---1", city.value.toString())
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.i("WeatherViewModel","WeatherViewModel destroyed!")
     }
 
     private fun getWeatherProperties() {
         //_response.value = "Set the Weather API Response here!"
         //WeatherApi.retrofitService.getProperties()
-        WeatherApi.retrofitService.getProperties("San Jose", WeatherAPPID).enqueue(
+        if(city.value == null){
+            city.value = defaultcity
+            Log.i("default", defaultcity)
+        }
+        Log.i(city.value.toString(), "City Passed Two")
+        WeatherApi.retrofitService.getProperties(city.value.toString(), WeatherAPPID).enqueue(
             object: Callback<WeatherProperty> {
                 override fun onFailure(call: Call<WeatherProperty>, t: Throwable) {
                     //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

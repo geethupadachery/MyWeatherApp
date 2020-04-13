@@ -56,7 +56,7 @@
             app:popUpToInclusive="false" />
     </fragment>-->
     <fragment
-        android:id="@+id/aboutFragment"
+        android:id="@+id/about"
         android:name="sjsu.cmpe277.myandroidmulti.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
@@ -64,7 +64,12 @@
         android:id="@+id/todaysWeather"
         android:name="sjsu.cmpe277.myandroidmulti.Network.WeatherFragment"
         android:label="weather_fragment"
-        tools:layout="@layout/weather_fragment" />
+        tools:layout="@layout/weather_fragment" >
+        <argument
+            android:name="cityname"
+            app:argType="string"
+            android:defaultValue="Chicago" />
+    </fragment>
     <fragment
         android:id="@+id/weeklyForecastFragment"
         android:name="sjsu.cmpe277.myandroidmulti.Network.WeeklyForecastFragment"
@@ -75,4 +80,13 @@
         android:name="sjsu.cmpe277.myandroidmulti.SettingsFragment"
         android:label="settings_fragment"
         tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/edit"
+        android:name="sjsu.cmpe277.myandroidmulti.EditLocationFragment"
+        android:label="fragment_edit_location"
+        tools:layout="@layout/fragment_edit_location" >
+        <action
+            android:id="@+id/action_edit_to_todaysWeather"
+            app:destination="@id/todaysWeather" />
+    </fragment>
 </navigation>
