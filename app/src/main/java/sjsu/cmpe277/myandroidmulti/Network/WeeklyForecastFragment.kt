@@ -2,6 +2,7 @@ package sjsu.cmpe277.myandroidmulti.Network
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModel
 import com.bumptech.glide.Glide
 
 import sjsu.cmpe277.myandroidmulti.R
+import sjsu.cmpe277.myandroidmulti.databinding.WeatherFragmentBinding
 import sjsu.cmpe277.myandroidmulti.databinding.WeeklyForecastFragmentBinding
 
 class WeeklyForecastFragment : Fragment() {
@@ -21,7 +23,9 @@ class WeeklyForecastFragment : Fragment() {
     }
 
     private lateinit var weeklyViewModel: WeeklyForecastViewModel
-
+    var latitude: String = ""
+    var longitude:String = ""
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,6 +42,7 @@ class WeeklyForecastFragment : Fragment() {
             Glide.with(this).load(weeklyWeatherData.weatherConditionIconUrl).into(weeklyBinding.image0)
         })
 
+
         //return inflater.inflate(R.layout.weekly_forecast_fragment, container, false)
         return weeklyBinding.root
     }
@@ -45,7 +50,7 @@ class WeeklyForecastFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         weeklyViewModel = ViewModelProviders.of(this).get(WeeklyForecastViewModel::class.java)
-        // TODO: Use the ViewModel
+
         }
 
 

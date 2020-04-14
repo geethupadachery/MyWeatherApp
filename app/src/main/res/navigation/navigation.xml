@@ -68,7 +68,7 @@
         <argument
             android:name="cityname"
             app:argType="string"
-            android:defaultValue="Chicago" />
+            android:defaultValue="San Jose" />
     </fragment>
     <fragment
         android:id="@+id/weeklyForecastFragment"

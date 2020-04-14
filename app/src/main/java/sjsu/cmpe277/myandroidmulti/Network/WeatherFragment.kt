@@ -25,6 +25,8 @@ class WeatherFragment : Fragment() {
 
     private lateinit var viewModel: WeatherViewModel
     //private lateinit var citypassed: String
+     var latitude: String = ""
+     var longitude:String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +44,7 @@ class WeatherFragment : Fragment() {
        // view?.findNavController()?.navigate(R.id.action_edit_to_todaysWeather)
 
         var citypassed = WeatherFragmentArgs.fromBundle(arguments!!).cityname
-        Log.i(citypassed,"City name passed!")
+        Log.i(citypassed,"City name passed$!")
         viewModel.city.value = citypassed
 
         viewModel.weatherLiveData.observe(viewLifecycleOwner, Observer { weatherData ->
@@ -59,6 +61,12 @@ class WeatherFragment : Fragment() {
             binding.humidity?.text = weatherData.humidity
             binding.visibility?.text = weatherData.visibility
             binding.date?.text = weatherData.dateTime
+
+            latitude = weatherData.lat
+            longitude = weatherData.lon
+            Log.i(latitude,"Latitude onCreateView")
+            Log.i(longitude,"Longitude OnCreateView")
+
         })
 
 
@@ -86,6 +94,7 @@ class WeatherFragment : Fragment() {
             Log.i("citypassed is null","Setting Mountain View as default!")
         }
         viewModel.getWeatherProperties()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

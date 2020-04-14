@@ -12,7 +12,7 @@
     <string name="text_question">Please select the following options</string>
     <string name="button_next">Next</string>
     <string name="button_tryagain">Try Again</string>
-    <string name="about_text">About the App Designer</string>
+    <string name="about_text">MyWeatherApp V1.0</string>
     <string name="about_title">About</string>
     <string name="drawone_menu">Draw Item One</string>
     <string name="drawone_text">You Selected Draw One</string>
@@ -22,5 +22,6 @@
     <string name="text_riskscorelabel">Your risk score</string>
     <string name="button_getscore">Get risk score</string>
     <string name="popup">Edit Location</string>
+    <string name="aboutdetails"> MyWeatherApp will dynamically display the current weather and the weekly weather forecast</string>
 
 </resources>
