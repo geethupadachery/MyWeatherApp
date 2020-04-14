@@ -32,8 +32,6 @@ class WeatherViewModel : ViewModel() {
         defaultcity = "Mountain View"
         Log.i("city---1", city.value.toString())
         getWeatherProperties()
-        //city.value = ""
-        //Log.i("city---1", city.value.toString())
     }
 
     override fun onCleared() {
@@ -41,32 +39,26 @@ class WeatherViewModel : ViewModel() {
         Log.i("WeatherViewModel","WeatherViewModel destroyed!")
     }
 
-    private fun getWeatherProperties() {
-        //_response.value = "Set the Weather API Response here!"
-        //WeatherApi.retrofitService.getProperties()
-        if(city.value == null){
-            city.value = defaultcity
-            Log.i("default", defaultcity)
-        }
+    fun getWeatherProperties() {
+
         Log.i(city.value.toString(), "City Passed Two")
+
         WeatherApi.retrofitService.getProperties(city.value.toString(), WeatherAPPID).enqueue(
             object: Callback<WeatherProperty> {
                 override fun onFailure(call: Call<WeatherProperty>, t: Throwable) {
-                    //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                     _response.value = "Failure: " + t.message
                 }
 
                 override fun onResponse(call: Call<WeatherProperty>, response: Response<WeatherProperty>) {
-                    //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                     //_response.value = response.body()
                     //_response.value = "Success: ${response.body()?.name} city retrieved; Temperature: ${response.body()?.mainpart?.temp}; Humidity: ${response.body()?.mainpart?.humidity}"
 
                     val weatherData = WeatherData(
 
                         lon = response?.body()?.coordPart?.lon.toString(),
-                        lat = response?.body()?.coordPart?.lon.toString(),
+                        lat = response?.body()?.coordPart?.lat.toString(),
                         weatherConditionMain = response?.body()?.weatherPart?.get(0)?.main.toString(),
-                        weatherConditionIconDescription = response?.body()?.weatherPart?.get(0)?.description.toString(),
+                        weatherConditionIconDescription = response?.body()?.weatherPart?.get(0)?.description.toString().capitalize(),
                         weatherConditionIconUrl = "https://openweathermap.org/img/w/${response?.body()?.weatherPart?.get(0)?.icon}.png",
 
                         temperature = response.body()?.mainpart?.temp?.kelvinToFarenheit().toString() + " °F",

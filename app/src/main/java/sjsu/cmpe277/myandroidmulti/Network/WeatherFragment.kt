@@ -32,7 +32,6 @@ class WeatherFragment : Fragment() {
     ): View? {
 
         val binding = DataBindingUtil.inflate<WeatherFragmentBinding>(inflater, R.layout.weather_fragment,container,false)
-        //viewModel = ViewModelProviders.of(this).get(QuestionViewModel::class.java)
         viewModel = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
 
 /*        viewModel._response.observe(viewLifecycleOwner, Observer { newresponse ->
@@ -41,6 +40,7 @@ class WeatherFragment : Fragment() {
 
        // Navigation.findNavController(view).navigate(R.id.action_edit_to_todaysWeather)
        // view?.findNavController()?.navigate(R.id.action_edit_to_todaysWeather)
+
         var citypassed = WeatherFragmentArgs.fromBundle(arguments!!).cityname
         Log.i(citypassed,"City name passed!")
         viewModel.city.value = citypassed
@@ -62,12 +62,12 @@ class WeatherFragment : Fragment() {
         })
 
 
-        binding.floatingActionButton.setOnClickListener { view ->
+        /*binding.floatingActionButton.setOnClickListener { view ->
             Snackbar.make(view, "Welcome to MyWeatherApp", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
                 .show()
 
-        }
+        }*/
 
         setHasOptionsMenu(true)
 
@@ -75,12 +75,17 @@ class WeatherFragment : Fragment() {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
-        // TODO: Use the ViewModel
         var citypassed = WeatherFragmentArgs.fromBundle(arguments!!).cityname
         Log.i(citypassed,"City name passed!")
         viewModel.city.value = citypassed
+        if(viewModel.city.value.isNullOrBlank()){
+            viewModel.city.value = "Mountain View"
+            Log.i("citypassed is null","Setting Mountain View as default!")
+        }
+        viewModel.getWeatherProperties()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
