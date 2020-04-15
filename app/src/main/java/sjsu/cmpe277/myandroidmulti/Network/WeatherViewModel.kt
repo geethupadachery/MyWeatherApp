@@ -52,34 +52,43 @@ class WeatherViewModel : ViewModel() {
                 override fun onResponse(call: Call<WeatherProperty>, response: Response<WeatherProperty>) {
                     //_response.value = response.body()
                     //_response.value = "Success: ${response.body()?.name} city retrieved; Temperature: ${response.body()?.mainpart?.temp}; Humidity: ${response.body()?.mainpart?.humidity}"
+                    if(response.isSuccessful) {
+                        val weatherData = WeatherData(
+                            lon = response?.body()?.coordPart?.lon.toString(),
+                            lat = response?.body()?.coordPart?.lat.toString(),
+                            weatherConditionMain = response?.body()?.weatherPart?.get(0)?.main.toString(),
+                            weatherConditionIconDescription = response?.body()?.weatherPart?.get(0)?.description.toString()
+                                .capitalize(),
+                            weatherConditionIconUrl = "https://openweathermap.org/img/w/${response?.body()?.weatherPart?.get(
+                                0
+                            )?.icon}.png",
+                            temperature = response.body()?.mainpart?.temp?.kelvinToFarenheit()
+                                .toString() + " °F",
+                            feelsLike = response.body()?.mainpart?.feels_like?.kelvinToFarenheit()
+                                .toString() + " °F",
+                            tempMax = "Max Temp : " + response.body()?.mainpart?.temp_max?.kelvinToFarenheit()
+                                .toString() + " °F",
+                            tempMin = "Min Temp : " + response.body()?.mainpart?.temp_min?.kelvinToFarenheit()
+                                .toString() + " °F",
+                            pressure = "${response.body()?.mainpart?.pressure} mBar",
+                            humidity = "${response.body()?.mainpart?.humidity}%",
 
-                    val weatherData = WeatherData(
+                            visibility = "${response.body()?.visibility} m",
 
-                        lon = response?.body()?.coordPart?.lon.toString(),
-                        lat = response?.body()?.coordPart?.lat.toString(),
-                        weatherConditionMain = response?.body()?.weatherPart?.get(0)?.main.toString(),
-                        weatherConditionIconDescription = response?.body()?.weatherPart?.get(0)?.description.toString().capitalize(),
-                        weatherConditionIconUrl = "https://openweathermap.org/img/w/${response?.body()?.weatherPart?.get(0)?.icon}.png",
+                            windSpeed = "${response.body()?.windPart?.speed} m/s",
+                            //windDegree = "${response.body()?.windPart?.deg}°",
 
-                        temperature = response.body()?.mainpart?.temp?.kelvinToFarenheit().toString() + " °F",
-                        feelsLike = response.body()?.mainpart?.feels_like?.kelvinToFarenheit().toString() + " °F",
-                        tempMax = "Max Temp : "+response.body()?.mainpart?.temp_max?.kelvinToFarenheit().toString() + " °F",
-                        tempMin = "Min Temp : "+response.body()?.mainpart?.temp_min?.kelvinToFarenheit().toString() + " °F",
-                        pressure = "${response.body()?.mainpart?.pressure} mBar",
-                        humidity = "${response.body()?.mainpart?.humidity}%",
+                            sunrise = response.body()?.sysPart?.sunrise?.convertTimeToString()
+                                .toString(),
+                            sunset = response.body()?.sysPart?.sunset?.convertTimeToString()
+                                .toString(),
 
-                        visibility = "${response.body()?.visibility} m",
-
-                        windSpeed = "${response.body()?.windPart?.speed} m/s",
-                        //windDegree = "${response.body()?.windPart?.deg}°",
-
-                        sunrise = response.body()?.sysPart?.sunrise?.convertTimeToString().toString(),
-                        sunset = response.body()?.sysPart?.sunset?.convertTimeToString().toString(),
-
-                        dateTime = response?.body()?.dt?.convertTimeToDateAndTimeString().toString(),
-                        cityAndCountry = "${response?.body()?.name}, ${response?.body()?.sysPart?.country}"
-                    )
-                    weatherLiveData.postValue(weatherData)
+                            dateTime = response?.body()?.dt?.convertTimeToDateAndTimeString()
+                                .toString(),
+                            cityAndCountry = "${response?.body()?.name}, ${response?.body()?.sysPart?.country}"
+                        )
+                        weatherLiveData.postValue(weatherData)
+                    }
                 }
 
             }
