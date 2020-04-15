@@ -3,10 +3,16 @@ package sjsu.cmpe277.myandroidmulti
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
+import sjsu.cmpe277.myandroidmulti.Network.WeatherViewModel
+import sjsu.cmpe277.myandroidmulti.databinding.FragmentAboutBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,7 +28,7 @@ import android.view.ViewGroup
  * create an instance of this fragment.
  */
 class AboutFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
 //    private var param1: String? = null
 //    private var param2: String? = null
 //    private var listener: OnFragmentInteractionListener? = null
@@ -40,6 +46,13 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false)
+        val binding = DataBindingUtil.inflate<FragmentAboutBinding>(inflater, R.layout.fragment_about,container,false)
+        binding.button5.setOnClickListener(){
+            Toast.makeText(context?.applicationContext, "Please read the Privacy Agreement",Toast.LENGTH_SHORT).show()
+
+        }
+
+        return binding.root
+        //return inflater.inflate(R.layout.fragment_about, container, false)
     }
 }

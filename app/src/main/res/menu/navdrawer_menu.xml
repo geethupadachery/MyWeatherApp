@@ -4,15 +4,19 @@
 
     <item
         android:id="@+id/todaysWeather"
-        android:title="Today's Weather" />
+        android:icon="@drawable/weathericon"
+        android:title="Today's Weather"
+        android:visible="true" />
     <item
         android:id="@+id/weeklyForecastFragment"
+        android:icon="@drawable/weathericon"
         android:title="Weekly Weather" />
     <item
         android:id="@+id/settingsFragment"
+        android:icon="@drawable/weathericon"
         android:title="Settings" />
     <item
         android:id="@+id/about"
-        android:icon="@android:drawable/presence_away"
+        android:icon="@drawable/weathericon"
         android:title="@string/about_title" />
 </menu>
