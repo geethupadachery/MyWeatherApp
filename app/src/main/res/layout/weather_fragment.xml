@@ -363,6 +363,16 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/weekly"
+                android:layout_width="179dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="104dp"
+                android:layout_marginBottom="235dp"
+                android:text="Weekly Weather" />
+
         </RelativeLayout>
 
     </RelativeLayout>

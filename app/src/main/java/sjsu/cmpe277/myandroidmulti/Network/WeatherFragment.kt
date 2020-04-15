@@ -67,6 +67,14 @@ class WeatherFragment : Fragment() {
             Log.i(latitude,"Latitude onCreateView")
             Log.i(longitude,"Longitude OnCreateView")
 
+            binding.weekly.setOnClickListener { view: View ->
+                val action = WeatherFragmentDirections.actionTodaysWeatherToWeeklyForecastFragment(
+                    LAT = latitude,
+                    LON = longitude
+                )
+                view?.findNavController()?.navigate(action)
+            }
+
         })
 
 

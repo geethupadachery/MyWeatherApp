@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/weeklyForecastFragment"
-    android:background="@drawable/background"
     tools:context=".Network.WeeklyForecastFragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background2">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -35,7 +35,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
-                        android:id="@+id/date0"
+                        android:id="@+id/date1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -56,15 +56,19 @@
                     android:padding="8dp">
 
                     <ImageView
-                        android:id="@+id/image0"
+                        android:id="@+id/image1"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -74,7 +78,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -86,25 +90,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
-                        android:id="@+id/tempMax"
+                        android:id="@+id/tempMax1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
-                        android:id="@+id/tempMin"
+                        android:id="@+id/tempMin1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
                         android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/description0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -115,7 +113,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -133,7 +131,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
-                        android:id="@+id/wind"
+                        android:id="@+id/date2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -154,14 +152,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image2"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -171,7 +174,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -183,16 +186,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -201,9 +207,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -221,6 +228,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -241,14 +249,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image3"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -258,7 +271,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -270,16 +283,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -290,7 +306,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -308,6 +324,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -328,14 +345,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image4"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -345,7 +367,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -357,17 +379,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
-                        android:id="@+id/sunrise"
+                        android:id="@+id/tempMin4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -376,9 +400,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -396,6 +421,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -416,14 +442,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image5"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -433,7 +464,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -445,16 +476,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -465,7 +499,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -483,6 +517,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -503,14 +538,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image6"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -520,7 +560,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -532,16 +572,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -550,9 +593,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -570,6 +614,7 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/date7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
@@ -590,14 +635,19 @@
                     android:padding="8dp">
 
                     <ImageView
+                        android:id="@+id/image7"
                         android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:tint="#FFFFFF"
                         app:srcCompat="@drawable/sunset" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                    <TextView
+                        android:id="@+id/description7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -607,7 +657,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#3CF1EBF1"
                     android:gravity="center"
@@ -619,16 +669,19 @@
                         android:layout_height="5dp" />
 
                     <TextView
+                        android:id="@+id/tempMax7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 C"
+                        android:text="Max Temp:15 C"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tempMin7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
+                        android:text="Min Temp:15 C"
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -636,350 +689,6 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="April 12 2020"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="35dp"
-                        android:tint="#FFFFFF"
-                        app:srcCompat="@drawable/sunset" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15 C"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="April 12 2020"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="35dp"
-                        android:tint="#FFFFFF"
-                        app:srcCompat="@drawable/sunset" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15 C"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="April 12 2020"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="35dp"
-                        android:tint="#FFFFFF"
-                        app:srcCompat="@drawable/sunset" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15 C"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="April 12 2020"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="42dp"
-                        android:layout_height="35dp"
-                        android:tint="#FFFFFF"
-                        app:srcCompat="@drawable/sunset" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3CF1EBF1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15 C"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
-                        android:textSize="14dp" />
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

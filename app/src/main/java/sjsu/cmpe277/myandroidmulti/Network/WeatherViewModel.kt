@@ -14,8 +14,7 @@ import sjsu.cmpe277.myandroidmulti.Utils.kelvinToFarenheit
 private const val WeatherAPPID = "2b492c001d57cd5499947bd3d3f9c47b"
 
 class WeatherViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
-    // TODO: Implement the ViewModel
+
     // The internal MutableLiveData String that stores the most recent response
     val _response = MutableLiveData<String>()
     val weatherLiveData = MutableLiveData<WeatherData>()

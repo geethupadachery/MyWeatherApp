@@ -69,12 +69,26 @@
             android:name="cityname"
             app:argType="string"
             android:defaultValue="San Jose" />
+        <action
+            android:id="@+id/action_todaysWeather_to_weeklyForecastFragment"
+            app:destination="@id/weeklyForecastFragment" />
     </fragment>
     <fragment
         android:id="@+id/weeklyForecastFragment"
         android:name="sjsu.cmpe277.myandroidmulti.Network.WeeklyForecastFragment"
         android:label="weekly_forecast_fragment"
-        tools:layout="@layout/weekly_forecast_fragment" />
+        tools:layout="@layout/weekly_forecast_fragment" >
+        <argument
+            android:name="LAT"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="37.34" />
+        <argument
+            android:name="LON"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="-121.89" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="sjsu.cmpe277.myandroidmulti.SettingsFragment"
