@@ -13,12 +13,12 @@
         <LinearLayout
             android:id="@+id/settings"
             android:layout_width="match_parent"
-            android:layout_height="57dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -35,14 +35,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Edit Location" />
+                        android:text="Edit Location"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/locationDescription"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="The location for which the weather is displayed" />
+                        android:text="The location for which the weather is displayed"
+                        android:textColor="#FFFFFF" />
+
+                    <Switch
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Edit"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -50,15 +61,6 @@
 
         </LinearLayout>
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="59dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="178dp"
-            android:layout_marginBottom="0dp"
-            android:layout_weight="1" />
     </RelativeLayout>
 
 

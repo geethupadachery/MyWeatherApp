@@ -393,11 +393,11 @@
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="118dp"
                 android:layout_marginBottom="206dp"
-                android:layout_toStartOf="@+id/button3"
+                android:layout_toStartOf="@+id/landmark"
                 android:text="Weekly" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/landmark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

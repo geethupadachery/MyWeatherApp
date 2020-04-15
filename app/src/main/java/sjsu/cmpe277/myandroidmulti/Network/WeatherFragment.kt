@@ -62,6 +62,15 @@ class WeatherFragment : Fragment() {
                 )
                 view?.findNavController()?.navigate(action)
             }
+
+            binding.landmark.setOnClickListener { view: View ->
+                val action = WeatherFragmentDirections.actionTodaysWeatherToMap(
+                    LAT = latitude,
+                    LON = longitude
+                )
+                view?.findNavController()?.navigate(action)
+            }
+
         })
 
 

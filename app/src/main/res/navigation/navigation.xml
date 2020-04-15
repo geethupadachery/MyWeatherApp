@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_todaysWeather_to_weeklyForecastFragment"
             app:destination="@id/weeklyForecastFragment" />
+        <action
+            android:id="@+id/action_todaysWeather_to_map"
+            app:destination="@id/map" />
     </fragment>
     <fragment
         android:id="@+id/weeklyForecastFragment"
@@ -88,15 +91,16 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="-121.89" />
-        <action
-            android:id="@+id/action_weeklyForecastFragment_to_map"
-            app:destination="@id/map" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="sjsu.cmpe277.myandroidmulti.SettingsFragment"
         android:label="settings_fragment"
-        tools:layout="@layout/settings_fragment" />
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_edit"
+            app:destination="@id/edit" />
+    </fragment>
     <fragment
         android:id="@+id/edit"
         android:name="sjsu.cmpe277.myandroidmulti.EditLocationFragment"
@@ -110,5 +114,14 @@
         android:id="@+id/map"
         android:name="sjsu.cmpe277.myandroidmulti.MapFragment"
         android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
+        tools:layout="@layout/fragment_map" >
+        <argument
+            android:name="LAT"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="LON"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

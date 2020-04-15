@@ -9,25 +9,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
-
+import androidx.navigation.findNavController
+import sjsu.cmpe277.myandroidmulti.databinding.SettingsFragmentBinding
 
 
 class SettingsFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = SettingsFragment()
-    }
-
+    private lateinit var binding : SettingsFragmentBinding
     private lateinit var viewModel: SettingsViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = DataBindingUtil.inflate<SettingsFragmentBinding>(inflater,
+            R.layout.settings_fragment,container,false)
 
-        return inflater.inflate(R.layout.settings_fragment, container, false)
-    }
+        viewModel = ViewModelProviders.of(this).get(SettingsViewModel::class.java)
+        binding.edit.setOnClickListener { view: View ->
+            val action = SettingsFragmentDirections.actionSettingsFragmentToEdit()
+            view.findNavController().navigate(action)
+        }
+            //return inflater.inflate(R.layout.settings_fragment, container, false)
+            return binding.root
+        }
+
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

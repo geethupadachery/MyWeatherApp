@@ -29,11 +29,24 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
 
     private lateinit var googleMap: GoogleMap
-    private lateinit var weeklyViewModel: WeeklyForecastViewModel
+    private lateinit var lat: String
+    private lateinit var lon:String
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
 
         super.onActivityCreated(savedInstanceState)
+
+        lat = MapFragmentArgs.fromBundle(arguments!!).LAT.toString()
+        lon = MapFragmentArgs.fromBundle(arguments!!).LON.toString()
+        Log.i(lat,"Latitude in Map Fragment")
+        Log.i(lon,"Longitude in Map Fragment")
+
+        if(lat.isNullOrBlank() or lon.isNullOrBlank()){
+            lat = "37.38"
+            lon = "-122.08"
+            Log.i("lat or lon is null","Setting Lat and Lon as default in Map Fragment!")
+        }
+
         map_view.onCreate(savedInstanceState)
         map_view.onResume()
         map_view.getMapAsync(this)
@@ -42,7 +55,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             map?.let { googleMap = it }
            // googleMap.isMyLocationEnabled = true
 
-            val location1 = LatLng(37.3382, -121.8863)
+            val location1 = LatLng(lat.toDouble(), lon.toDouble())
             googleMap.addMarker(MarkerOptions().position(location1).title("My Location"))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location1,5f))
 
