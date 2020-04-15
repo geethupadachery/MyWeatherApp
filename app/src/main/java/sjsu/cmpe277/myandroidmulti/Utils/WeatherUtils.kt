@@ -4,13 +4,13 @@ package sjsu.cmpe277.myandroidmulti.Utils
 import java.text.SimpleDateFormat
 import java.util.*
 
-fun Long.convertTimeToDateString() : String {
+fun Long.convertTimeToDateAndTimeString() : String {
 
     try {
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = this*1000.toLong()
 
-        val outputDateFormat = SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.ENGLISH)
+        val outputDateFormat = SimpleDateFormat("EEE, d MMM yyyy HH:mm a", Locale.ENGLISH)
         outputDateFormat.timeZone = TimeZone.getDefault()
         return outputDateFormat.format(calendar.time)
 
@@ -28,6 +28,23 @@ fun Long.convertTimeToString() : String {
         calendar.timeInMillis = this*1000.toLong()
 
         val outputDateFormat = SimpleDateFormat("hh:mm a", Locale.ENGLISH)
+        outputDateFormat.timeZone = TimeZone.getDefault()
+        return outputDateFormat.format(calendar.time)
+
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+
+    return this.toString()
+}
+
+fun Long.convertTimeToDateString() : String {
+
+    try {
+        val calendar = Calendar.getInstance()
+        calendar.timeInMillis = this*1000.toLong()
+
+        val outputDateFormat = SimpleDateFormat("EEE, MMM d, yyyy", Locale.ENGLISH)
         outputDateFormat.timeZone = TimeZone.getDefault()
         return outputDateFormat.format(calendar.time)
 
