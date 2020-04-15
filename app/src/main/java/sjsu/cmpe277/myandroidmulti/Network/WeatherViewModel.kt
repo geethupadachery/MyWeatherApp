@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import sjsu.cmpe277.myandroidmulti.Utils.convertTimeToDateAndTimeString
 import sjsu.cmpe277.myandroidmulti.Utils.convertTimeToDateString
 import sjsu.cmpe277.myandroidmulti.Utils.convertTimeToString
 import sjsu.cmpe277.myandroidmulti.Utils.kelvinToFarenheit
@@ -75,7 +76,7 @@ class WeatherViewModel : ViewModel() {
                         sunrise = response.body()?.sysPart?.sunrise?.convertTimeToString().toString(),
                         sunset = response.body()?.sysPart?.sunset?.convertTimeToString().toString(),
 
-                        dateTime = response?.body()?.dt?.convertTimeToDateString().toString(),
+                        dateTime = response?.body()?.dt?.convertTimeToDateAndTimeString().toString(),
                         cityAndCountry = "${response?.body()?.name}, ${response?.body()?.sysPart?.country}"
                     )
                     weatherLiveData.postValue(weatherData)
