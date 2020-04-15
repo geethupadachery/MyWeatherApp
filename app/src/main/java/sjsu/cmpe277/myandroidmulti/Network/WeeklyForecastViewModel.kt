@@ -19,6 +19,7 @@ class WeeklyForecastViewModel : ViewModel() {
     val _response = MutableLiveData<String>()
     var lat = MutableLiveData<String>()
     var lon = MutableLiveData<String>()
+    var city = MutableLiveData<String>()
 //    private lateinit var defaultlat: String
 //    private lateinit var defaultlon: String
 

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class EditLocationViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
 
     var cityname = MutableLiveData<String>()
     init {

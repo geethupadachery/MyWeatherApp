@@ -6,14 +6,27 @@
     tools:context=".Network.WeeklyForecastFragment">
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background2">
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mountain View"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,6 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -68,6 +82,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -94,6 +109,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -101,6 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -135,6 +152,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -164,6 +182,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -190,6 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -197,6 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -232,6 +253,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -261,6 +283,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -287,6 +310,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -294,6 +318,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -328,6 +353,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -357,6 +383,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -383,6 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -390,6 +418,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -425,6 +454,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -454,6 +484,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -480,6 +511,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -487,6 +519,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -521,6 +554,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -550,6 +584,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -576,6 +611,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -583,6 +619,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>
@@ -618,6 +655,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="April 12 2020"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
                 </LinearLayout>
 
@@ -647,6 +685,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Partly Cloudy"
+                        android:textColor="#FFFFFF"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -673,6 +712,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Max Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                     <TextView
@@ -680,6 +720,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Min Temp:15 C"
+                        android:textColor="#FFFFFF"
                         android:textSize="12dp" />
 
                 </LinearLayout>

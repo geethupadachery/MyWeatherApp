@@ -23,6 +23,7 @@ class WeeklyForecastFragment : Fragment() {
     }
 
     private lateinit var weeklyViewModel: WeeklyForecastViewModel
+    private  var citypassed: String =""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +32,9 @@ class WeeklyForecastFragment : Fragment() {
 
         val weeklyBinding = DataBindingUtil.inflate<WeeklyForecastFragmentBinding>(inflater, R.layout.weekly_forecast_fragment,container,false)
         weeklyViewModel = ViewModelProviders.of(this).get(WeeklyForecastViewModel::class.java)
+        citypassed = WeeklyForecastFragmentArgs.fromBundle(arguments!!).city
+        Log.i(citypassed,"City name passed weekly!")
+        weeklyViewModel.city.value = citypassed
 
          weeklyViewModel.weatherDataList.observe(viewLifecycleOwner, Observer { weeklyWeather ->
             Log.i("size   ", weeklyWeather.size.toString())
@@ -90,8 +94,13 @@ class WeeklyForecastFragment : Fragment() {
                  weeklyBinding.description7?.text = dailyWeather.weatherConditionIconDescription
                  Glide.with(this).load(dailyWeather.weatherConditionIconUrl)
                      .into(weeklyBinding.image7)
+
              }
+             Log.i(citypassed,"city geethu")
+             weeklyBinding.city?.text = citypassed.capitalize()
         })
+
+
         return weeklyBinding.root
     }
 
@@ -101,16 +110,20 @@ class WeeklyForecastFragment : Fragment() {
 
         var lat = WeeklyForecastFragmentArgs.fromBundle(arguments!!).LAT
         var lon = WeeklyForecastFragmentArgs.fromBundle(arguments!!).LON
+        var citypassed = WeeklyForecastFragmentArgs.fromBundle(arguments!!).city
         Log.i(lat,"Latitude in Weekly")
         Log.i(lon,"Longitude in Weekly")
+        Log.i(citypassed,"city in Weekly")
 
         weeklyViewModel.lat.value = lat
         weeklyViewModel.lon.value = lon
+        weeklyViewModel.city.value = citypassed
 
-        if(weeklyViewModel.lat.value.isNullOrBlank() or weeklyViewModel.lon.value.isNullOrBlank()){
+        if(weeklyViewModel.lat.value.isNullOrBlank() or weeklyViewModel.lon.value.isNullOrBlank() or weeklyViewModel.city.value.isNullOrBlank()){
             weeklyViewModel.lat.value = "37.38"
             weeklyViewModel.lon.value = "-122.08"
-            Log.i("lat or lon is null","Setting Lat and Lon as default!")
+            weeklyViewModel.city.value = "Mountain View"
+            Log.i("lat or lon or City is null","Setting Lat and Lon and  city as default!")
         }
         weeklyViewModel.getWeeklyProperties()
         }

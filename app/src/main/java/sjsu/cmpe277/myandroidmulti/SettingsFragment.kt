@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
@@ -31,6 +32,15 @@ class SettingsFragment : Fragment() {
         binding.edit.setOnClickListener { view: View ->
             val action = SettingsFragmentDirections.actionSettingsFragmentToEdit()
             view.findNavController().navigate(action)
+        }
+
+
+        binding.submit.setOnClickListener() {
+            Toast.makeText(
+                context?.applicationContext,
+                "Submitted comments successfully",
+                Toast.LENGTH_SHORT
+            ).show()
         }
             //return inflater.inflate(R.layout.settings_fragment, container, false)
             return binding.root

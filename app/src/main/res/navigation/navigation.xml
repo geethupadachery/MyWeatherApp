@@ -91,6 +91,10 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="-121.89" />
+        <argument
+            android:name="city"
+            app:argType="string"
+            android:defaultValue="Mountain View" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
