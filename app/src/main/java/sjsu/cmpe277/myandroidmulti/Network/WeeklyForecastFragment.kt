@@ -23,10 +23,7 @@ class WeeklyForecastFragment : Fragment() {
     }
 
     private lateinit var weeklyViewModel: WeeklyForecastViewModel
-/*    var latitude: String = ""
-    var longitude:String = ""*/
 
-    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -95,7 +92,6 @@ class WeeklyForecastFragment : Fragment() {
                      .into(weeklyBinding.image7)
              }
         })
-        //return inflater.inflate(R.layout.weekly_forecast_fragment, container, false)
         return weeklyBinding.root
     }
 
@@ -112,8 +108,8 @@ class WeeklyForecastFragment : Fragment() {
         weeklyViewModel.lon.value = lon
 
         if(weeklyViewModel.lat.value.isNullOrBlank() or weeklyViewModel.lon.value.isNullOrBlank()){
-            weeklyViewModel.lat.value = "60.99"
-            weeklyViewModel.lon.value = "30.9"
+            weeklyViewModel.lat.value = "37.38"
+            weeklyViewModel.lon.value = "-122.08"
             Log.i("lat or lon is null","Setting Lat and Lon as default!")
         }
         weeklyViewModel.getWeeklyProperties()

@@ -19,39 +19,37 @@ class WeatherViewModel : ViewModel() {
     // The internal MutableLiveData String that stores the most recent response
     val _response = MutableLiveData<String>()
     val weatherLiveData = MutableLiveData<WeatherData>()
-
     var city = MutableLiveData<String>()
-    lateinit var defaultcity: String
+    var defaultcity: String
 
 
     /**
      * Call getWeatherProperties() on init so we can display status immediately.
      */
     init {
-        Log.i("WeatherViewModel", "WeatherViewModel created!")
+        Log.i("inside init", "WeatherViewModel created!")
         defaultcity = "Mountain View"
-        Log.i("city---1", city.value.toString())
+        Log.i("setting default city as ", city.value.toString())
         getWeatherProperties()
     }
 
     override fun onCleared() {
         super.onCleared()
-        Log.i("WeatherViewModel","WeatherViewModel destroyed!")
+        Log.i("onCleared ","WeatherViewModel destroyed!")
     }
 
     fun getWeatherProperties() {
 
-        Log.i(city.value.toString(), "City Passed Two")
+        Log.i("getWeatherProperties for ", city.value.toString())
 
         WeatherApi.retrofitService.getProperties(city.value.toString(), WeatherAPPID).enqueue(
             object: Callback<WeatherProperty> {
+
                 override fun onFailure(call: Call<WeatherProperty>, t: Throwable) {
                     _response.value = "Failure: " + t.message
                 }
 
                 override fun onResponse(call: Call<WeatherProperty>, response: Response<WeatherProperty>) {
-                    //_response.value = response.body()
-                    //_response.value = "Success: ${response.body()?.name} city retrieved; Temperature: ${response.body()?.mainpart?.temp}; Humidity: ${response.body()?.mainpart?.humidity}"
                     if(response.isSuccessful) {
                         val weatherData = WeatherData(
                             lon = response?.body()?.coordPart?.lon.toString(),
@@ -90,7 +88,6 @@ class WeatherViewModel : ViewModel() {
                         weatherLiveData.postValue(weatherData)
                     }
                 }
-
             }
         )
     }

@@ -19,16 +19,16 @@ class WeeklyForecastViewModel : ViewModel() {
     val _response = MutableLiveData<String>()
     var lat = MutableLiveData<String>()
     var lon = MutableLiveData<String>()
-    lateinit var defaultlat: String
-    lateinit var defaultlon: String
+//    private lateinit var defaultlat: String
+//    private lateinit var defaultlon: String
 
     /**
      * Call getWeatherProperties() on init so we can display status immediately.
      */
     init {
         Log.i("WeatherViewModel", "WeatherViewModel created!")
-        defaultlat = "60.99"
-        defaultlon = "30.9"
+       // defaultlat = "60.99"
+       // defaultlon = "30.9"
         Log.i("Latitude in init", lat.value.toString())
         Log.i("Longitude in init", lon.value.toString())
         getWeeklyProperties()

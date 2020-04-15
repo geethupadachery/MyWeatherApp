@@ -19,14 +19,9 @@ import sjsu.cmpe277.myandroidmulti.databinding.WeatherFragmentBinding
 
 class WeatherFragment : Fragment() {
 
-//    companion object {
-//        fun newInstance() = WeatherFragment()
-//    }
-
     private lateinit var viewModel: WeatherViewModel
-    //private lateinit var citypassed: String
-     var latitude: String = ""
-     var longitude:String = ""
+    private var latitude: String = ""
+    private var longitude:String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,13 +30,6 @@ class WeatherFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<WeatherFragmentBinding>(inflater, R.layout.weather_fragment,container,false)
         viewModel = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
-
-/*        viewModel._response.observe(viewLifecycleOwner, Observer { newresponse ->
-            binding.weathertextView.text = newresponse.toString() //display the raw json data
-        })*/
-
-       // Navigation.findNavController(view).navigate(R.id.action_edit_to_todaysWeather)
-       // view?.findNavController()?.navigate(R.id.action_edit_to_todaysWeather)
 
         var citypassed = WeatherFragmentArgs.fromBundle(arguments!!).cityname
         Log.i(citypassed,"City name passed$!")
@@ -74,7 +62,6 @@ class WeatherFragment : Fragment() {
                 )
                 view?.findNavController()?.navigate(action)
             }
-
         })
 
 
@@ -84,9 +71,7 @@ class WeatherFragment : Fragment() {
                 .show()
 
         }*/
-
         setHasOptionsMenu(true)
-
         return binding.root//inflater.inflate(R.layout.weather_fragment, container, false)
     }
 
