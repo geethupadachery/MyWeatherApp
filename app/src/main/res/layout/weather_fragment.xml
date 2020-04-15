@@ -70,8 +70,10 @@
                 android:id="@+id/temperatureDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="0dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -365,12 +367,14 @@
 
             <Button
                 android:id="@+id/weekly"
-                android:layout_width="179dp"
-                android:layout_height="34dp"
+                android:layout_width="199dp"
+                android:layout_height="37dp"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="104dp"
-                android:layout_marginBottom="235dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="218dp"
                 android:text="Weekly Weather" />
 
         </RelativeLayout>
