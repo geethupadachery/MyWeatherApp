@@ -27,8 +27,8 @@ class WeeklyForecastViewModel : ViewModel() {
      */
     init {
         Log.i("WeatherViewModel", "WeatherViewModel created!")
-       // defaultlat = "60.99"
-       // defaultlon = "30.9"
+       // defaultlat = "37.3382"
+       // defaultlon = "-121.8863"
         Log.i("Latitude in init", lat.value.toString())
         Log.i("Longitude in init", lon.value.toString())
         getWeeklyProperties()

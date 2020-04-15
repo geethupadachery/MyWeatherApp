@@ -88,6 +88,9 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="-121.89" />
+        <action
+            android:id="@+id/action_weeklyForecastFragment_to_map"
+            app:destination="@id/map" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -103,4 +106,9 @@
             android:id="@+id/action_edit_to_todaysWeather"
             app:destination="@id/todaysWeather" />
     </fragment>
+    <fragment
+        android:id="@+id/map"
+        android:name="sjsu.cmpe277.myandroidmulti.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

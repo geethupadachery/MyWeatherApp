@@ -19,4 +19,7 @@
         android:id="@+id/about"
         android:icon="@drawable/weathericon"
         android:title="@string/about_title" />
+    <item
+        android:id="@+id/map"
+        android:title="map" />
 </menu>

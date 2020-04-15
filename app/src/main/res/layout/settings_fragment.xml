@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:background="@drawable/background2">
 
         <LinearLayout
             android:id="@+id/settings"
@@ -40,20 +40,25 @@
                     <TextView
                         android:id="@+id/locationDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="The location for which the weather is displayed" />
 
                 </LinearLayout>
 
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="59dp"
-                    android:layout_weight="1" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1" />
     </RelativeLayout>
 
 

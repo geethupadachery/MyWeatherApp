@@ -55,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MOUNTAIN VIEW"
+                    android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
                 <TextView
@@ -62,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="15 April 2020"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -73,7 +75,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="200dp"
-                android:layout_marginEnd="0dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -82,6 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Clear Sky"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
                 <TextView
@@ -90,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="60°F"
+                    android:textColor="#FFFFFF"
                     android:textSize="90sp" />
 
                 <LinearLayout
@@ -103,7 +107,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Min Temp: 05:05 AM" />
+                        android:text="Min Temp: 60 °F"
+                        android:textColor="#FFFFFF" />
 
                     <Space
                         android:layout_width="50sp"
@@ -115,7 +120,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Max Temp: 05:05 PM" />
+                        android:text="Max Temp: 60 °F"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -160,6 +166,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sunrise"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -167,6 +174,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="06:40 AM"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -197,6 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sunset"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -204,6 +213,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="06:40 AM"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -234,6 +244,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Wind"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -241,6 +252,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="06:40 AM"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -278,6 +290,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pressure"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -285,6 +298,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="06:40 AM"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -316,6 +330,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Humidity"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -323,6 +338,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="06:40 AM"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -353,6 +369,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Visibility"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
                             android:textSize="12dp" />
 
                         <TextView
@@ -360,6 +378,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100 m"
+                            android:textColor="#FFFFFF"
                             android:textSize="14dp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -367,15 +386,25 @@
 
             <Button
                 android:id="@+id/weekly"
-                android:layout_width="199dp"
-                android:layout_height="37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="118dp"
+                android:layout_marginBottom="206dp"
+                android:layout_toStartOf="@+id/button3"
+                android:text="Weekly" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="105dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginBottom="218dp"
-                android:text="Weekly Weather" />
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="211dp"
+                android:text="Landmark" />
 
         </RelativeLayout>
 

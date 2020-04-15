@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentActivity
+
 
 
 class SettingsFragment : Fragment() {
@@ -23,13 +25,15 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.settings_fragment, container, false)
     }
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(SettingsViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
     /*fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
