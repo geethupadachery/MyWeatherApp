@@ -40,7 +40,7 @@ class SettingsFragment : Fragment() {
             Toast.makeText(
                 context?.applicationContext,
                 "Submitted comments successfully",
-                Toast.LENGTH_SHORT
+                Toast.LENGTH_LONG
             ).show()
         }
         binding.floatingActionButton.setOnClickListener { view ->

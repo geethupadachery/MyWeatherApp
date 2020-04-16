@@ -74,7 +74,9 @@
             app:destination="@id/weeklyForecastFragment" />
         <action
             android:id="@+id/action_todaysWeather_to_map"
-            app:destination="@id/map" />
+            app:destination="@id/map"
+            app:popUpTo="@id/todaysWeather"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/weeklyForecastFragment"

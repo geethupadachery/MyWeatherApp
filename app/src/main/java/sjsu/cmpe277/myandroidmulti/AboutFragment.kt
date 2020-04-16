@@ -48,7 +48,7 @@ class AboutFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentAboutBinding>(inflater, R.layout.fragment_about,container,false)
         binding.button5.setOnClickListener(){
-            Toast.makeText(context?.applicationContext, "Please read the Privacy Agreement",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context?.applicationContext, "Please read the Privacy Agreement",Toast.LENGTH_LONG).show()
 
         }
 
