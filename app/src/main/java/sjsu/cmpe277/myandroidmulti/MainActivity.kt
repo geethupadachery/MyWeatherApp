@@ -11,6 +11,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController //imported from androidx.navigation:navigation-ui-ktx
+import com.google.android.material.navigation.NavigationView
 import sjsu.cmpe277.myandroidmulti.databinding.ActivityMainBinding
 
 
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
 
         NavigationUI.setupWithNavController(binding.navView, navController)
+
 
         Log.i("MainActivity", "onCreate Called")
 

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
+import com.google.android.material.snackbar.Snackbar
 import sjsu.cmpe277.myandroidmulti.databinding.SettingsFragmentBinding
 
 
@@ -41,6 +42,12 @@ class SettingsFragment : Fragment() {
                 "Submitted comments successfully",
                 Toast.LENGTH_SHORT
             ).show()
+        }
+        binding.floatingActionButton.setOnClickListener { view ->
+            Snackbar.make(view, "Notifications", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
+
         }
             //return inflater.inflate(R.layout.settings_fragment, container, false)
             return binding.root
