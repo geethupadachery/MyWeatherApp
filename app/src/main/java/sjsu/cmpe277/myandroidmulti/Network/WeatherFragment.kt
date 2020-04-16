@@ -89,6 +89,8 @@ class WeatherFragment : Fragment() {
 
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
+
+
         var citypassed = WeatherFragmentArgs.fromBundle(arguments!!).cityname
         Log.i(citypassed,"City name passed!")
         viewModel.city.value = citypassed

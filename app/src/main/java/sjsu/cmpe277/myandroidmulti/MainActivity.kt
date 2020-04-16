@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController //imported from androidx.navigation:navigation-ui-ktx
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
 
+
 //        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 //        navController = Navigation.findNavController(this, R.id.myNavHostFragment)
 //        NavigationUI.setupActionBarWithNavController(this,navController)
@@ -36,7 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
-
 
         NavigationUI.setupWithNavController(binding.navView, navController)
 
